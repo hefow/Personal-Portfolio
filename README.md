@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 # Personal_Portfolio
-This is personal portfolio using reactjs
+This is personal portfolio using reactjs developers used to show their skills, projects they made it and personal info.
+
+to run this project you will need the following
+1.install node modules
+2.npm run dev in the project directory
 =======
 # React + Vite
 
