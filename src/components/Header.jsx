@@ -1,25 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import menu from "../assets/menu_FILL0_wght400_GRAD0_opsz48.svg"
 import close from "../assets/close_FILL0_wght400_GRAD0_opsz48.svg"
 
-function Header(){
-    return(
-        <div className="header" id="header">
-         <nav>
-            <ul class="sidebar">
-            <li ><a href="#"><svg xmlns={menu} height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-            </ul>
-            <ul>
-            <li><a href="#">Ahmed<span>hefow</span></a></li>
-            <li class="hideOnMobile"><a href="#project">Project</a></li>
-            <li class="hideOnMobile"><a href="#bio">Bio</a></li>
-            <li class="hideOnMobile"><a href="#skills">Skills</a></li>
-            <li class="hideOnMobile"><a href="#contacts">Contact</a></li>
-            <li class="menu-button" ><a href="#"><svg xmlns={close} height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-            </ul>
-       </nav>  
 
-        </div>
+
+function Header(){
+    const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Handle form submission logic here
+    console.log('Form submitted:', { firstName, lastName, email })
+  }
+    return(
+ 
+    <header className={`flex justify-between mx-4 sm:mx-20 rounded-lg ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+        <h4 className="font-semibold text-teal-600  my-4">HEFOW</h4>
+        <ul className="flex gap-4 my-4">
+          {['home', 'service', 'projects', 'contact'].map((item, index) => (
+            <li key={item} className={isVisible ? 'animate-slide-in' : 'opacity-0'} style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+              <a href={`#${item}`} className="text-slate-600 hover:text-teal-600 hover:underline transition-colors duration-300 ">{item}</a>
+            </li>
+          ))}
+        </ul>
+      </header>
     )
 }
 

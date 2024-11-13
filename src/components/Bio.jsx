@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import myProfile from "../assets/my_profile.jpg"
 
 const Bio =()=>{
-    return <div className="container-a" id="bio">
-     <div className="about">
-        <div className="about-img">
-            <img src={myProfile} alt="" />
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        setIsVisible(true)
+    }, [])
+    return(
+        <section className="bg-white flex flex-wrap justify-around py-12">
+        <div className={`mt-2 w-full sm:w-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '1.8s' }}>
+          <img src="/placeholder.svg?height=300&width=300" alt="Profile" width={300} height={300} className="border-4 border-teal-600 mt-2 mx-auto transition-all duration-300 hover:shadow-xl" />
         </div>
-        <div className="about-content">
-            <h2>About me</h2>
-            <p>
-            i'm full stack developer at jamhuriya university of technology and science in mogadishu somalia.
-            i'm currently working as a full-stack developer. i graduated high school at al musbah primary and secondory school in
-            2021. i started education in 
-            </p>
+        <div className="p-4 ml-4 space-y-4 text-slate-800 w-full sm:w-1/2">
+          {[
+            { bg: 'bg-teal-100', content: 'I am a dedicated and detail-oriented MERN stack developer with a passion for crafting innovative web and mobile solutions. With expertise in full-stack development, UI/UX design, and mobile app development' },
+            { bg: 'bg-teal-50', content: 'As a passionate MERN stack developer, I enjoy creating full-stack applications that solve real-world problems.' },
+            { bg: 'bg-slate-100', content: 'I build web applications like School management system and StudyGroupOrganizer with a team' }
+          ].map((item, index) => (
+            <div key={index} className={`${item.bg} p-4 rounded transition-all duration-300 hover:shadow-md ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: `${2 + index * 0.2}s` }}>
+              <p>{item.content}</p>
+            </div>
+          ))}
         </div>
-     </div>
-    </div>
+      </section>
+    )
 }
 
 export default Bio
