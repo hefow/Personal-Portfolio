@@ -1,19 +1,18 @@
-<<<<<<< HEAD
-# Personal_Portfolio
-This is personal portfolio using reactjs developers used to show their skills, projects they made it and personal info.
+# 🚀 My Portfolio - Full Stack Developer
 
-to run this project you will need the following
-1.install node modules
-2.npm run dev in the project directory
-=======
-# React + Vite
+Welcome to my **personal portfolio website**, built using **React.js**! This project showcases my skills, experience, and projects as a **Full Stack Developer**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🖥️ Live Demo
+🔗 [Live Portfolio](https://yourportfolio.com) *(Replace with your live link)*
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
+✅ **Modern UI/UX** - Sleek and responsive design  
+✅ **About Me** - Introduction, skills, and experience  
+✅ **Projects Showcase** - Display of my best projects  
+✅ **Contact Form** - Reach out to me easily  
+✅ **Dark Mode** - Toggle between light and dark themes  
+✅ **Fully Responsive** - Optimized for all devices  
 
->>>>>>> 3098349 (complete project)
