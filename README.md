@@ -3,7 +3,7 @@
 Welcome to my **personal portfolio website**, built using **React.js**! This project showcases my skills, experience, and projects as a **Full Stack Developer**.
 
 ## 🖥️ Live Demo
-🔗 [Live Portfolio]([https://yourportfolio.com](https://personal-portfolio-e4e1lrwmd-ahmed-s-projects-cbc6833e.vercel.app/)) 
+🔗 [Live Portfolio](https://personal-portfolio-e4e1lrwmd-ahmed-s-projects-cbc6833e.vercel.app/)
 
 ---
 
