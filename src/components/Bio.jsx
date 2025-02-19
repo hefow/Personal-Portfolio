@@ -10,7 +10,7 @@ const Bio =()=>{
     return(
         <section className="bg-white flex flex-wrap justify-around py-12">
         <div className={`mt-2 w-full sm:w-auto ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '1.8s' }}>
-          <img src="/placeholder.svg?height=300&width=300" alt="Profile" width={300} height={300} className="border-4 border-teal-600 mt-2 mx-auto transition-all duration-300 hover:shadow-xl" />
+          <img src={myProfile} alt="Profile" width={300} height={300} className="border-4 border-teal-600 mt-2 mx-auto transition-all duration-300 hover:shadow-xl" />
         </div>
         <div className="p-4 ml-4 space-y-4 text-slate-800 w-full sm:w-1/2">
           {[

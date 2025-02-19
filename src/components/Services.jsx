@@ -1,28 +1,43 @@
 import React, { useEffect, useState } from "react";
 
-function Services(){
-   const [isVisible, setIsVisible] = useState(false)
 
-   useEffect(() => {
-      setIsVisible(true)
-   }, [])
+const services = [
+  {
+    icon: "fas fa-code", // FontAwesome icon class
+    title: "Web Development",
+    description: "Build modern and responsive web applications using cutting-edge technologies.",
+  },
+  {
+    icon: "fas fa-paint-brush",
+    title: "UI/UX Design",
+    description: "Create stunning and user-friendly interfaces that enhance user experience.",
+  },
+  {
+    icon: "fas fa-mobile-alt",
+    title: "Mobile App Development",
+    description: "Develop high-performance mobile applications for both Android and iOS platforms.",
+  },
+];
+function Services(){
+
    return(
-      <div>
-         <h1 className={`text-center mt-8 font-black text-3xl text-slate-800 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: '1s' }}>Services</h1>
-      <section className="flex flex-wrap justify-between mx-4 sm:mx-20 my-4 p-5 ">
-        {[
-          { img: 'ui', title: 'UI/UX', desc: 'I focus on creating intuitive, user-centered designs that ensure a seamless experience across devices.' },
-          { img: 'web', title: 'Web development', desc: 'As a skilled web developer, I specialize in building responsive, high-performance web applications using modern technologies.' },
-          { img: 'mobile', title: 'Mobile app', desc: 'I design and develop mobile applications with a focus on performance, usability, and cross-platform compatibility.' }
-        ].map((service, index) => (
-          <div key={service.title} className={`p-4 w-full sm:w-1/3 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{ animationDelay: `${1.2 + index * 0.2}s` }}>
-            <img src={`/placeholder.svg?height=45&width=45`} alt={service.title} width={45} height={45} className="mt-4 transition-transform duration-300 hover:scale-110" />
-            <h3 className="mt-4 text-slate-800 font-bold">{service.title}</h3>
-            <p className="mt-4 text-slate-600">{service.desc}</p>
+    <section className="py-16 bg-gray-100">
+    <div className="container mx-auto text-center">
+      <h2 className="text-3xl font-bold text-gray-800 mb-8">Our Services</h2>
+      <div className="flex flex-wrap justify-center gap-8">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-lg p-6 w-72 text-center transition-transform transform hover:-translate-y-2"
+          >
+            <i className={`${service.icon} text-4xl text-blue-500 mb-4`}></i>
+            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+            <p className="text-gray-600">{service.description}</p>
           </div>
         ))}
-      </section>
       </div>
+    </div>
+  </section>
    )
 }
 
